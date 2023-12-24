@@ -21,12 +21,19 @@ const CourseSchema = new mongoose.Schema({
     image: String
 });
 
+const UserCourseSchema = new mongoose.Schema({
+    username: String,
+    courseId: String
+});
+
 const Admin = mongoose.model('Admin', AdminSchema);
 const User = mongoose.model('User', UserSchema);
 const Course = mongoose.model('Course', CourseSchema);
+const UserCourse = mongoose.model('UserCourse', UserCourseSchema);
 
 module.exports = {
     Admin,
     User,
-    Course
+    Course,
+    UserCourse
 }
