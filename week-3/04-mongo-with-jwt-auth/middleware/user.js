@@ -1,6 +1,12 @@
+const { verifyJwt } = require('../../02-jwt/index');
+
 function userMiddleware(req, res, next) {
-    // Implement user auth logic
-    // You need to check the headers and validate the user from the user DB. Check readme for the exact headers to be expected
+    const [bearer, token] = req.headers.authorization.split(' ');
+    if(verifyJwt(token)) {
+        next();
+    } else {
+        res.status(403).send('Invalid admin credentials');
+    }
 }
 
 module.exports = userMiddleware;

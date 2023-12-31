@@ -3,8 +3,6 @@ const router = Router();
 const userMiddleware = require("../middleware/user");
 const courseIdMiddleware = require('../middleware/course');
 const { User, Course, UserCourse } = require('../db/index');
-const mongoose = require('mongoose');
-
 
 // User Routes
 router.post('/signup', async (req, res) => {

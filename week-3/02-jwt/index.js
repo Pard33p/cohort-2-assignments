@@ -24,7 +24,7 @@ function signJwt(username, password) {
         password: password
     });
     if (validation.success) {
-        return jwt.sign({username: username}, password);
+        return jwt.sign({username: username}, jwtPassword);
     } else {
         return null;
     }
