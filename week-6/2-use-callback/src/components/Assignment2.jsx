@@ -8,9 +8,10 @@ export function Assignment2() {
     const [inputText, setInputText] = useState('');
 
     // Your code starts here
-    function showAlert() {
-
-    }
+    // Here inputText is dependency because if we don't add it, first definition will be cached with empty inputText and same will be used always which is not right.
+    const showAlert = useCallback(function () {
+        alert(inputText);
+    }, [inputText]);
     // Your code ends here
 
     return (
