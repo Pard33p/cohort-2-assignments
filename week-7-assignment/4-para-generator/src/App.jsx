@@ -6,6 +6,7 @@ const samplePara = "This is a sample para";
 
 function App() {
   const [paraCount, setParaCount] = useState(0);
+  const [showParas, setShowParas] = useState(false);
 
   const paragraphs = useMemo(() => {
     const paras = [];
@@ -22,14 +23,22 @@ function App() {
         type="text"
         placeholder="Enter number of words"
         onChange={(e) => {
+          setShowParas(false);
           setParaCount(e.target.value);
         }}
       />
-      {/* <button onClick={() => setParaCount(countTemp)}>Generate</button> */}
+      <button
+        onClick={() => {
+          setShowParas(true);
+        }}
+      >
+        Generate
+      </button>
 
-      {paragraphs.map((para) => {
-        return <p>{para}</p>;
-      })}
+      {showParas &&
+        paragraphs.map((para) => {
+          return <p>{para}</p>;
+        })}
     </>
   );
 }
