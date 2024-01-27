@@ -1,0 +1,57 @@
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  border: 1px solid #2c2929;
+  overflow: hidden;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: rgb(255, 255, 255);
+  background-color: #2c2929;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.card-content {
+  height: 65%;
+  padding: 20px;
+  text-align: center;
+}
+
+.cover {
+  height: 35%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.fit-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.container {
+  display: flex;
+}
+
+.box {
+  flex: 1;
+/* Optional: Add margin or padding to create space between boxes */
+  margin-right: 40px;
+}
+
+.profile-pic {
+  margin-left: 30%;
+  margin-top: 10%;
+  align-items: center;
+  left: 30%;
+  width: 35%;
+  height: 25%; /* Set the height of the split div */
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid rgb(255, 255, 255);
+}
+
+.image {
+  max-width: 105%;
+  max-height: 105%;
+}

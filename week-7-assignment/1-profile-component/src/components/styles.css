@@ -1,0 +1,53 @@
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+    height: 65%;
+    padding: 20px;
+    text-align: center;
+}
+
+.cover {
+    height: 35%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.fit-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container {
+    display: flex;
+}
+
+.box {
+    flex: 1;
+  /* Optional: Add margin or padding to create space between boxes */
+    margin-right: 40px;
+}
+
+.profile-pic {
+    position: absolute;
+    top: 20%;
+    left: 32%;
+    width: 35%;
+    height: 25%; /* Set the height of the split div */
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.image {
+    max-width: 100%;
+    max-height: 100%;
+}
